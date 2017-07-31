@@ -1,0 +1,18 @@
+div {
+  height: 100%;
+  width:100%;
+  background-color: Pink;
+
+}
+h1 {
+  color: white;
+  text-align: center;
+  text-shadow: 3px 3px #000000;
+}
+h2{
+  color: pink;
+  text-align: center;
+}
+li{
+  margin-bottom: 5.5%;
+}
