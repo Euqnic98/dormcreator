@@ -34,9 +34,9 @@ class MatchHandler(webapp2.RequestHandler):
         my_template=jinja_environment.get_template("templates/matchpage.html")
         self.response.write(my_template.render())
     # def Red(self):
-class SubmitHandler(webapp2.RequestHandler):
-    my_template=jinja_environment.get_template("templates/submitpage.html")
-    self.response.write(my_template.render())
+# class SubmitHandler(webapp2.RequestHandler):
+#     my_template=jinja_environment.get_template("templates/submitpage.html")
+#     self.response.write(my_template.render())
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler),
