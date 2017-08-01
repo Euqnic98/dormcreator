@@ -34,5 +34,6 @@ class MatchHandler(webapp2.RequestHandler):
             my_template=jinja_environment.get_template()
             self.response.write(my_template.render())
 app = webapp2.WSGIApplication([
-    ('/', LinkHandler),
+    ('/link', LinkHandler),
+    ('/'), MainHandler),
 ], debug=True)
