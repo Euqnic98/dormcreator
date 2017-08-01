@@ -35,6 +35,7 @@ class MatchHandler(webapp2.RequestHandler):
         template = jinja_environment.get_template("templates/matchpage.html")
         render_dict = {}
         render_dict["color"] = self.request.get("Color")
+        render_dict["gender"] = self.request.get("Gender")
         self.response.write(template.render(render_dict))
         Color = self.request.get("color")
         Style = self.request.get("style")
