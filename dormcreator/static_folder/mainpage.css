@@ -27,8 +27,8 @@ div.room {
     cursor: pointer;
     margin: 5px;
     position: relative;
-    top: 175px;
-    left: 170px;
+    top: 50px;
+    left: 200px;
 
   }
 
@@ -59,7 +59,7 @@ div.room {
   .header1 {
     text-shadow: 2px 2px 8px red;
     position: relative;
-    top: -350px;
+    top: -375px;
     left: 250px;
     color: white;
   }
