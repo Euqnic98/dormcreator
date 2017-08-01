@@ -34,12 +34,13 @@ class MatchHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template("templates/matchpage.html")
         self.response.write(template.render())
+        render_dict = {}
+        render_dict["color"] = "Red"
         Color = self.request.get("color")
         Style = self.request.get("style")
         Gender = self.request.get("gender")
-        render_dict = {}
-        render_dict["color"] = "Red"
-        self.response.out.write(template.render(render_dict))
+
+
 
         my_output = User(color = Color, style = Style, gender = Gender)
         my_output.put()
