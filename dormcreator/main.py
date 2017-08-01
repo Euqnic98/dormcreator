@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 from model import User
+from google.appengine.api import users
 import webapp2
 import jinja2
 import os
@@ -33,9 +34,9 @@ class LinkHandler(webapp2.RequestHandler):
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
         template = jinja_environment.get_template("templates/matchpage.html")
+        self.response.write(template.render())
         render_dict = {}
-        render_dict["color"] = self.request.get("Color")
-        self.response.write(template.render(render_dict))
+        render_dict["color"] = "Red"
         Color = self.request.get("color")
         Style = self.request.get("style")
         Gender = self.request.get("gender")
@@ -44,6 +45,33 @@ class MatchHandler(webapp2.RequestHandler):
 
         my_output = User(color = Color, style = Style, gender = Gender)
         my_output.put()
+# class SignPage(webapp2.RequestHandler):
+#     def get(self):
+#         user = users.get_current_user()
+#         if user:
+#             nickname = user.nickname()
+#             logout_url = users.create_logout_url('/')
+#             greeting = 'Welcome, {}! (<a href="{}">sign out</a>)'.format(
+#                 nickname, logout_url)
+#         else:
+#             login_url = users.create_login_url('/')
+#             greeting = '<a href="{}">Sign in</a>'.format(login_url)
+#
+#         self.response.write(
+#             '<html><body>{}</body></html>'.format(greeting))
+#
+#
+# class AdminPage(webapp2.RequestHandler):
+#     def get(self):
+#         user = users.get_current_user()
+#         if user:
+#             if users.is_current_user_admin():
+#                 self.response.write('You are an administrator.')
+#             else:
+#                 self.response.write('You are not an administrator.')
+#         else:
+#             self.response.write('You are not logged in.')
+
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
@@ -52,4 +80,6 @@ app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler),
     ('/match', MatchHandler)
+    # ('/login', SignPage),
+    # ('/admin', AdminPage)
 ], debug=True)
