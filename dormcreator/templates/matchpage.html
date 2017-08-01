@@ -6,22 +6,24 @@
 
 <form method="post" action ="">
 
-<select name="Color">
+  <select name="Gender" class='gender'>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+  </select>
+
+<select name="Color" class='color'>
   <option value="Red">Red</option>
   <option value="Blue">Blue</option>
   <option value="Gray">Gray</option>
 </select>
 
-<select name="Style">
+<select name="Style" class='style'>
   <option value="Modern">Modern</option>
   <option value="Sports">Sports</option>
   <option value="Bohemian">Bohemian</option>
 </select>
 
-<select name="Gender">
-  <option value="Male">Male</option>
-  <option value="Female">Female</option>
-</select>
+
 <form action="http://localhost:13080/">
   <button id = "submit_button" type="button">Submit</button>
 
