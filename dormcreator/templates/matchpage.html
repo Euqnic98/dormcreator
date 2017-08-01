@@ -11,31 +11,36 @@
 
   <select name="Gender" class='gender'>
     <option value="Gender">Gender</option>
-    <option value="Male">Male</option>
-    <option value="Female">Female</option>
+    <option value="Male Sheets.jpeg">Male</option>
+    <option value="FemaleSheets.jpeg">Female</option>
   </select>
 
 <select name="Color" class='color'>
-  <option value="Color">Color</option>
+  <option value="">Color</option>
   <option value="Red Comforter.jpeg">Red</option>
-  <option value="Blue">Blue</option>
-  <option value="Gray">Gray</option>
+  <option value="BlueComforter.jpeg">Blue</option>
+  <option value="GrayComforter.jpeg">Gray</option>
 </select>
 
 <select name="Style" class='style'>
   <option value="Style">Style</option>
-  <option value="Modern">Modern</option>
-  <option value="Sports">Sports</option>
-  <option value="Bohemian">Bohemian</option>
+  <option value="ModernStyle.jpeg">Modern</option>
+  <option value="SportsStyle.jpeg">Sports</option>
+  <option value="BohemianStyle.jpeg">Bohemian</option>
 </select>
 
 <input class="submit" type="submit" value="Submit">
 
 </form>
-
-</div>
+{%if(color)%}
 <h1> <img src = "/resources/{{ color }}" > </h1>
-
+{%endif%}
+{%if(gender)%}
+<h1> <img src = "/resources/{{ gender }}" > </h1>
+{%endif%}
+{%if(style)%}
+<h1> <img src = "/resources/{{ style }}" > </h1>
+{%endif%}
 
 </body>
 </html>
