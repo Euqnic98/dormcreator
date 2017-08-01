@@ -14,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+from model import User
 import webapp2
 import jinja2
 import os
@@ -33,6 +34,11 @@ class MatchHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/matchpage.html")
         self.response.write(my_template.render())
+        Color = self.request.get("color")
+        Style = self.request.get("style")
+        Gender = self.request.get("gender")
+        my_output = User(color = Color, style = Style, gender = Gender)
+        my_output.put()
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
