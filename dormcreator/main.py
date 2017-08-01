@@ -30,7 +30,7 @@ class LinkHandler(webapp2.RequestHandler):
         self.response.write(my_template.render())
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
-        my_template=jinja_environment.get_template("templates/match.html")
+        my_template=jinja_environment.get_template("templates/matchpage.html")
         self.response.write(my_template.render())
     # def Red(self):
 app = webapp2.WSGIApplication([
