@@ -1,3 +1,46 @@
 body {
   background-image: url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg");
 }
+.submit {
+    display: inline-block;
+    border-radius: 12px;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    position: relative;
+    /*top: 150px;
+    right: 132px;*/
+
+  }
+
+.submit span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+
+.submit span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+
+.submit:hover span {
+    padding-right: 25px;
+  }
+
+.submit:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
