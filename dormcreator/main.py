@@ -35,5 +35,5 @@ class MatchHandler(webapp2.RequestHandler):
             self.response.write(my_template.render())
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
-    ('/'), MainHandler),
+    ('/', MainHandler), 
 ], debug=True)
