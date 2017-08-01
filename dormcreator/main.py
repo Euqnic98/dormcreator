@@ -36,5 +36,6 @@ class MatchHandler(webapp2.RequestHandler):
     # def Red(self):
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
-    ('/', MainHandler)
+    ('/', MainHandler),
+    ('/match', MatchHandler)
 ], debug=True)
