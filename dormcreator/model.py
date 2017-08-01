@@ -5,3 +5,4 @@ class User(ndb.Model):
     color = ndb.StringProperty()
     style = ndb.StringProperty()
     gender = ndb.StringProperty()
+    
