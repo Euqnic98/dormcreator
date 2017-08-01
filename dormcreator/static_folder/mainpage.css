@@ -2,9 +2,9 @@ body {
   background-image: url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg");
 }
 
-h1 {
-  color: white;
-  font-family: "", ;
+h1.welcome {
+  color: transparent;
+
 }
 
 div.room {
@@ -27,8 +27,8 @@ div.room {
     cursor: pointer;
     margin: 5px;
     position: relative;
-    top: 50px;
-    left: 200px;
+    top: -150px;
+    left: 590px;
 
   }
 
@@ -57,16 +57,17 @@ div.room {
     right: 0;
   }
   .header1 {
+    font-family: Comic, sans-serif;
     text-shadow: 2px 2px 8px red;
     position: relative;
-    top: -375px;
+    top: -500px;
     left: 250px;
     color: white;
   }
   .header2 {
     text-shadow: 2px 2px 8px red;
     position: relative;
-    top: -390px;
+    top: -530px;
     left: 250px;
     color: white
   }
