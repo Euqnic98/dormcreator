@@ -33,6 +33,9 @@ class MatchHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/matchpage.html")
         self.response.write(my_template.render())
+        Color = self.request.get("Color")
+        Style = self.request.get("Style")
+        Gender = self.request.get("Gender")
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
