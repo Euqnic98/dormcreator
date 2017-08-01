@@ -15,6 +15,7 @@
 # limitations under the License.
 #
 from model import User
+from google.appengine.api import users
 import webapp2
 import jinja2
 import os
@@ -26,12 +27,14 @@ class MainHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/mainpage.html")
         self.response.write(my_template.render())
+
 class LinkHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/link.html")
         self.response.write(my_template.render())
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
+        user = users.get_current_user()
         template = jinja_environment.get_template("templates/matchpage.html")
         render_dict = {}
         render_dict["color"] = self.request.get("Color")
@@ -44,6 +47,19 @@ class MatchHandler(webapp2.RequestHandler):
 
         my_output = User(color = Color, style = Style, gender = Gender)
         my_output.put()
+class LoginPage(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        if user:
+            link= "<a href='/match'>Continue</a>"
+            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
+                (user.nickname(), users.create_logout_url('/'))) + link
+
+        else:
+            greeting = ('<a href="%s">Sign in or register</a>.' %
+                users.create_login_url('/'))
+
+        self.response.write('<html><body>%s</body></html>' % greeting)
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
@@ -51,5 +67,6 @@ class MatchHandler(webapp2.RequestHandler):
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler),
-    ('/match', MatchHandler)
+    ('/match', MatchHandler),
+    ('/login', LoginPage)
 ], debug=True)

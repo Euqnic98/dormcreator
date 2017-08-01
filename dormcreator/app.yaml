@@ -12,19 +12,9 @@ handlers:
 - url: /resources
   static_dir: static_folder
 
-# - url: /profile/.*
-#   script: _go_app
-#   login: required
-#
-# - url: /admin/.*
-#   script: _go_app
-#   login: admin
-#
-# - url: /.*
-#   script: _go_app
-
 - url: .*
   script: main.app
+  login: required
 
 libraries:
 - name: jinja2
