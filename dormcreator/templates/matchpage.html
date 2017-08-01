@@ -10,17 +10,20 @@
 <form>
 
   <select name="Gender" class='gender'>
+    <option value="Gender">Gender</option>
     <option value="Male">Male</option>
     <option value="Female">Female</option>
   </select>
 
 <select name="Color" class='color'>
+  <option value="Color">Color</option>
   <option value="Red Comforter.jpeg">Red</option>
   <option value="Blue">Blue</option>
   <option value="Gray">Gray</option>
 </select>
 
 <select name="Style" class='style'>
+  <option value="Style">Style</option>
   <option value="Modern">Modern</option>
   <option value="Sports">Sports</option>
   <option value="Bohemian">Bohemian</option>
@@ -31,7 +34,7 @@
 </form>
 
 </div>
-
+{%if (color == red) %}
 <h1> <img src = "/resources/{{ color }}" > </h1>
 
 
