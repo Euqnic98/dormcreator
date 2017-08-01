@@ -1,3 +1,4 @@
+
 $("#submit_button").click(function() {
-    $("#hi").fadeOut(4000);
+    $("#hi").fadeOut(2000);
   })
