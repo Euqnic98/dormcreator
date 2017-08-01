@@ -22,7 +22,7 @@ jinja_environment = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)))
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        my_template=jinja_environment.get_template()
+        my_template=jinja_environment.get_template("templates/mainpage.html")
         self.response.write(my_template.render())
 class LinkHandler(webapp2.RequestHandler):
     def get(self):
