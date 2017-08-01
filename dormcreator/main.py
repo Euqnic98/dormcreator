@@ -30,9 +30,10 @@ class LinkHandler(webapp2.RequestHandler):
         self.response.write(my_template.render())
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
-        def Red(self):
-            my_template=jinja_environment.get_template()
-            self.response.write(my_template.render())
+        my_template=jinja_environment.get_template()
+        self.response.write(my_template.render())
+    def Red(self):
 app = webapp2.WSGIApplication([
-    ('/', LinkHandler),
+    ('/link', LinkHandler),
+    ('/', MainHandler),
 ], debug=True)

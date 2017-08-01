@@ -11,12 +11,12 @@ div.room {
     right: 350px;
   }
 
-  .dropdown {
+.dropdown {
       position: relative;
       display: inline-block;
   }
 
-  .dropdown-content {
+.dropdown-content {
       display: none;
       position: absolute;
       background-color: #f9f9f9;
@@ -26,6 +26,6 @@ div.room {
       z-index: 1;
   }
 
-  .dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content {
       display: block;
   }
