@@ -53,15 +53,12 @@ class LoginPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
         if user:
-            link= "<a href='/match'>Continue</a>"
-            greeting = ('Welcome, %s! (<a href="%s">sign out</a>)' %
-                (user.nickname(), users.create_logout_url('/'))) + link
-
+            self.redirect("/match")
         else:
             greeting = ('<a href="%s">Sign in or register</a>.' %
-                users.create_login_url('/'))
+                users.create_login_url('/match'))
 
-        self.response.write('<html><body>%s</body></html>' % greeting)
+            self.response.write('<html><body>%s</body></html>' % greeting)
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
