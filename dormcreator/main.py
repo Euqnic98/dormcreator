@@ -28,11 +28,11 @@ class LinkHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/link.html")
         self.response.write(my_template.render())
-# class MatchHandler(webapp2.RequestHandler):
-#     def get(self):
-#         my_template=jinja_environment.get_template()
-#         self.response.write(my_template.render())
-#     def Red(self):
+class MatchHandler(webapp2.RequestHandler):
+    def get(self):
+        my_template=jinja_environment.get_template("templates/match.html")
+        self.response.write(my_template.render())
+    # def Red(self):
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler)
