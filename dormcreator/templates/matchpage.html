@@ -16,7 +16,7 @@
   </select>
 
 <select name="Color" class='color'>
-  <option value="Color">Color</option>
+  <option value="">Color</option>
   <option value="Red Comforter.jpeg">Red</option>
   <option value="BlueComforter.jpeg">Blue</option>
   <option value="GrayComforter.jpeg">Gray</option>
@@ -32,11 +32,15 @@
 <input class="submit" type="submit" value="Submit">
 
 </form>
-
+{%if(color)%}
 <h1> <img src = "/resources/{{ color }}" > </h1>
+{%endif%}
+{%if(gender)%}
 <h1> <img src = "/resources/{{ gender }}" > </h1>
+{%endif%}
+{%if(style)%}
 <h1> <img src = "/resources/{{ style }}" > </h1>
-
+{%endif%}
 
 </body>
 </html>
