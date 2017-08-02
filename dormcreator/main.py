@@ -63,7 +63,7 @@ class LoginPage(webapp2.RequestHandler):
 
             self.response.write('<html><body>%s</body></html>' % greeting)
 class GalleryHandler(webapp2.RequestHandler):
-    def load_gallery(self):
+    # def load_gallery(self):
     def get(self):
         self.load_gallery()
         # query=User.query()
