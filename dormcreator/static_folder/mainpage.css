@@ -71,6 +71,8 @@ div.room {
     left: 250px;
     color: white
   }
-  .dropdown {
 
-  }
+  .boxed {
+  border: 4px solid yellow;
+  top: -530px;
+}
