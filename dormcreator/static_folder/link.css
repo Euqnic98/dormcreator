@@ -1,7 +1,6 @@
 div {
   height: 100%;
   width:100%;
-  /*background-color: Pink;*/
 
 }
 h1 {
@@ -14,7 +13,10 @@ h2{
   text-align: center;
 }
 
-
 body{
   background-image:url("http://www.onlyfashionbags.com/wp-content/uploads/2016/03/Cartoon-Shopping-Bags-1.jpg")
+}
+p {
+  background-color: white;
+  display: inline-block;
 }
