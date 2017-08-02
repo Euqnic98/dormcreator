@@ -34,6 +34,30 @@
 </form>
 {%if(color)%}
 <h1> <img src = "/resources/{{ color }}" > </h1>
+  {%if(color == "Red Comforter.jpeg")%}
+    <p> “VCNY Down Alternative Comforter” </br>
+      Store: Bed Bath & Beyond </br>
+      Size: Twin XL </br>
+      Price: $69.99 </br>
+    </p>
+    {%endif%}
+
+    {%if(color == "BlueComforter.jpeg")%}
+      <p> “Comfort Classics 3M Down-Alternative Reversible Comforter Set” </br>
+        Store: Kohl’s </br>
+        Size: Twin XL </br>
+        Price: $104.99 </br>
+      </p>
+      {%endif%}
+
+      {%if(color == "GrayComforter.jpeg")%}
+        <p> ““Faded Ribbed Jersey Comforter” </br>
+          Store: Urban Outfitters </br>
+          Size: Twin XL </br>
+          Price: $169.00 </br>
+          **Online only** </br>
+        </p>
+        {%endif%}
 
 {%endif%}
 {%if(gender)%}
