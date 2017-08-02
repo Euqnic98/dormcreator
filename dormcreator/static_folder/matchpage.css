@@ -1,6 +1,10 @@
 body {
   background-image: url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg");
 }
+h1 {
+  color: white;
+  text-shadow: 2px 2px 8px red;
+}
 .submit {
     display: inline-block;
     border-radius: 12px;
@@ -8,8 +12,8 @@ body {
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
-    padding: 20px;
+    font-size: 16px;
+    padding: 5px;
     width: 150px;
     transition: all 0.5s;
     cursor: pointer;
@@ -44,3 +48,88 @@ body {
     opacity: 1;
     right: 0;
   }
+
+  .gender {
+      /* Size and position */
+      position: relative; /* Enable absolute positioning for children and pseudo elements */
+      width: 100px;
+      padding: 20px;
+      margin: 0 auto;
+
+      /* Styles */
+      background: ;
+      color: black;
+      outline: none;
+      cursor: pointer;
+
+      /* Font settings */
+      font-weight: bold;
+  }
+  .gender:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -6px;
+    border-width: 6px 0 6px 6px;
+    border-style: solid;
+    /*border-color: transparent #fff;*/
+}
+.color {
+    /* Size and position */
+    position: relative; /* Enable absolute positioning for children and pseudo elements */
+    width: 100px;
+    padding: 20px;
+    margin: 0 auto;
+
+    /* Styles */
+    background: ;
+    color: black;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-weight: bold;
+}
+.color:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -6px;
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  /*border-color: transparent #fff;*/
+}
+.style {
+    /* Size and position */
+    position: relative; /* Enable absolute positioning for children and pseudo elements */
+    width: 100px;
+    padding: 20px;
+    margin: 0 auto;
+
+    /* Styles */
+    background: ;
+    color: black;
+    outline: none;
+    cursor: pointer;
+
+    /* Font settings */
+    font-weight: bold;
+}
+.style:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -6px;
+  border-width: 6px 0 6px 6px;
+  border-style: solid;
+  /*border-color: transparent #fff;*/
+}

@@ -33,14 +33,76 @@
 
 </form>
 {%if(color)%}
-<h1> <img src = "/resources/{{ color }}" > </h1>
+<h1> <img src = "/resources/{{ color }}" height ="500" width = "700"> </h1>
+  {%if(color == "Red Comforter.jpeg")%}
+    <p> “VCNY Down Alternative Comforter” </br>
+      Store: Bed Bath & Beyond </br>
+      Size: Twin XL </br>
+      Price: $69.99 </br>
+    </p>
+    {%endif%}
+
+    {%if(color == "BlueComforter.jpeg")%}
+      <p> “Comfort Classics 3M Down-Alternative Reversible Comforter Set” </br>
+        Store: Kohl’s </br>
+        Size: Twin XL </br>
+        Price: $104.99 </br>
+      </p>
+      {%endif%}
+
+      {%if(color == "GrayComforter.jpeg")%}
+        <p> ““Faded Ribbed Jersey Comforter” </br>
+          Store: Urban Outfitters </br>
+          Size: Twin XL </br>
+          Price: $169.00 </br>
+          **Online only** </br>
+        </p>
+        {%endif%}
 
 {%endif%}
+
 {%if(gender)%}
-<h1> <img src = "/resources/{{ gender }}" > </h1>
+<h1> <img src = "/resources/{{ gender }}" height ="500" width = "700" > </h1>
+  {%if(gender == "Male Sheets.jpeg")%}
+    <p> “Wamsutta Cool Touch Percale Cotton Twin Fitted Sheet in Black” </br>
+      Store: Bed Bath & Beyond </br>
+      Size: Twin/Twin XL </br>
+      Price: $14.99 </br>
+    </p>
+  {%endif%}
+
+  {%if(gender == "FemaleSheets.jpeg")%}
+    <p> “Benzoyl Peroxide-Resistant Microfiber Twin XL” </br>
+      Store: Bed Bath & Beyond </br>
+      Size: Twin/Twin XL </br>
+      Price: $19.99 </br>
+    </p>
+  {%endif%}
+
 {%endif%}
 {%if(style)%}
-<h1> <img src = "/resources/{{ style }}" > </h1>
+<h1> <img src = "/resources/{{ style }}" height ="500" width = "700" > </h1>
+  {%if(style == "ModernStyle.jpeg")%}
+    <p> “White Wood American Dream” </br>
+      Store: Dormify </br>
+      Price: $96.00 </br>
+    </p>
+  {%endif%}
+
+  {%if(style == "SportsStyle.jpeg")%}
+    <p> “Chicago Blackhawks Logo Poster” </br>
+      Store: Fine Art America </br>
+      Price: $22.35 </br>
+    </p>
+  {%endif%}
+
+  {%if(style == "BohemianStyle.jpeg")%}
+    <p> “Pine Wood L.O.V.E” </br>
+      Store: Dormify </br>
+      Price: $96.00 </br>
+    </p>
+  {%endif%}
+
 {%endif%}
 
 </body>

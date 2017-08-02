@@ -73,6 +73,13 @@ div.room {
     left: 250px;
     color: white
   }
-  .dropdown {
 
-  }
+.boxed{
+  position: relative;
+	width:1000px;
+	height:150px;
+  background: lightblue;
+  border: none;
+  top: -260px;
+  border-radius: 16px;
+}
