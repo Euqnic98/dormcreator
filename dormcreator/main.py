@@ -44,6 +44,7 @@ class MatchHandler(webapp2.RequestHandler):
         render_dict["color"] = self.request.get("Color")
         render_dict["gender"] = self.request.get("Gender")
         render_dict["style"] = self.request.get("Style")
+        render_dict["extras"] = self.request.get("Extras")
         self.response.write(template.render(render_dict))
         # Color = self.request.get("color")
         # Style = self.request.get("style")
@@ -54,7 +55,9 @@ class MatchHandler(webapp2.RequestHandler):
         my_output = User(user_id=user.user_id(),
          color = render_dict["color"],
          style = render_dict["style"],
-         gender = render_dict["gender"])
+         gender = render_dict["gender"],
+         extras = render_dict["extras"]
+         )
         my_output.put()
 class LoginPage(webapp2.RequestHandler):
     def get(self):
