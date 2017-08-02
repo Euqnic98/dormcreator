@@ -63,11 +63,17 @@ class LoginPage(webapp2.RequestHandler):
 
             self.response.write('<html><body>%s</body></html>' % greeting)
 class GalleryHandler(webapp2.RequestHandler):
-    # def load_gallery(self):
-    def get(self):
-        # self.load_gallery()
-        # query=User.query()
-        self.response.write("hi")
+    def load_gallery(self):
+        current_user = users.get_current_user()
+        get_saved_data=User.query(User.user_id == current_user.user_id())
+        saved_data=get_saved_data.fetch()
+        # for x in saved_data:
+        #     self.response.write("<img src='/resources/" + x.style + "'>")
+        render_data={}
+        render_data["saved_sets"]=saved_data
+        my_template=jinja_environment.get_template("templates/gallery.html")
+        self.response.write(my_template.render(render_data))
+
     def post(self):
         user = users.get_current_user()
         my_output = User(user_id=user.user_id(),
@@ -76,13 +82,11 @@ class GalleryHandler(webapp2.RequestHandler):
             gender = self.request.get("save_gender"),
             extras = self.request.get("save_extras")
         )
-        self.response.write("thanks for saving")
-        # self.load_gallery()
         my_output.put()
-    # def Red(self):
-# class SubmitHandler(webapp2.RequestHandler):
-#     my_template=jinja_environment.get_template("templates/submitpage.html")
-#     self.response.write(my_template.render())
+        self.load_gallery()
+    def get(self):
+        self.load_gallery()
+
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler),
