@@ -1,16 +1,16 @@
 h1 {
   font-size: 50px;
-  color: purple;
+  color: black;
   text-align: center;
-  text-shadow: 4px 2px #000000;
+  /*text-shadow: 4px 2px #000000;*/
 }
 body{
-  background-image:url("http://ovaroc.com/f/2017/06/best-design-fantastic-desks-for-teenage-bedrooms-large-glass-window-bedside-table-also-gray-flooring-cool-teenage-bedrooms-desks-for-teenage-bedrooms-bedroom-for-teenager-teenager-bedroom-cozy-ideas-2017.jpg")
+  background-image:url("https://s-media-cache-ak0.pinimg.com/736x/99/69/f9/9969f9be19bfdf4df79d666140448c9e--cover-wallpaper-summer-wallpaper.jpg")
 }
 li {
   font-size: 35px;
-  color: white;
-  text-shadow: 4px 2px #000000;
+  color: purple;
+  /*text-shadow: 4px 2px #000000;*/
   margin-bottom: 60px;
 
 }
