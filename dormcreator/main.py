@@ -65,7 +65,7 @@ class LoginPage(webapp2.RequestHandler):
 class GalleryHandler(webapp2.RequestHandler):
     # def load_gallery(self):
     def get(self):
-        self.load_gallery()
+        # self.load_gallery()
         # query=User.query()
         self.response.write("hi")
     def post(self):
@@ -77,7 +77,7 @@ class GalleryHandler(webapp2.RequestHandler):
             extras = self.request.get("save_extras")
         )
         self.response.write("thanks for saving")
-        self.load_gallery()
+        # self.load_gallery()
         my_output.put()
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
