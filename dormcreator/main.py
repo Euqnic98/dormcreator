@@ -71,6 +71,7 @@ class GalleryHandler(webapp2.RequestHandler):
         #     self.response.write("<img src='/resources/" + x.style + "'>")
         render_data={}
         render_data["saved_sets"]=saved_data
+        render_data["length"]=len(saved_data)
         my_template=jinja_environment.get_template("templates/gallery.html")
         self.response.write(my_template.render(render_data))
 
