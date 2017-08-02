@@ -40,6 +40,7 @@ class MatchHandler(webapp2.RequestHandler):
         render_dict["color"] = self.request.get("Color")
         render_dict["gender"] = self.request.get("Gender")
         render_dict["style"] = self.request.get("Style")
+        render_dict["Red Comforter"] = "jfjcghvh"
         self.response.write(template.render(render_dict))
         Color = self.request.get("color")
         Style = self.request.get("style")
@@ -59,6 +60,10 @@ class LoginPage(webapp2.RequestHandler):
                 users.create_login_url('/match'))
 
             self.response.write('<html><body>%s</body></html>' % greeting)
+class FakeHandler(webapp2.RequestHandler):
+    def get(self):
+        my_template = jinja_environment.get_template("templates/UsefulItems.html")
+        self.response.write(my_template.render())
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
@@ -67,5 +72,6 @@ app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
     ('/', MainHandler),
     ('/match', MatchHandler),
-    ('/login', LoginPage)
+    ('/login', LoginPage),
+    ('/Fake', FakeHandler)
 ], debug=True)
