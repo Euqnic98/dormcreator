@@ -4,12 +4,10 @@
   </head>
   <body>
     <h1> Your Gallery </h1>
-
       {%for x in range(1,length)%}
         <p> Room Set {{x}} </p>
-      <!-- { % endfor% } -->
       <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}">
-
       {%endfor%}
+    <a href="/">Home Page</a><a href="/match">Match Page</a>
   </body>
 </html>
