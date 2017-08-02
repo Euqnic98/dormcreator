@@ -38,7 +38,7 @@ class UsefulHandler(webapp2.RequestHandler):
         self.response.write(my_template.render())
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
-        user = users.get_current_user()
+
         template = jinja_environment.get_template("templates/matchpage.html")
         render_dict = {}
         render_dict["color"] = self.request.get("Color")
@@ -52,13 +52,6 @@ class MatchHandler(webapp2.RequestHandler):
 
 
 
-        my_output = User(user_id=user.user_id(),
-         color = render_dict["color"],
-         style = render_dict["style"],
-         gender = render_dict["gender"],
-         extras = render_dict["extras"]
-         )
-        my_output.put()
 class LoginPage(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -69,7 +62,23 @@ class LoginPage(webapp2.RequestHandler):
                 users.create_login_url('/match'))
 
             self.response.write('<html><body>%s</body></html>' % greeting)
-
+class GalleryHandler(webapp2.RequestHandler):
+    def load_gallery(self):
+    def get(self):
+        self.load_gallery()
+        # query=User.query()
+        self.response.write("hi")
+    def post(self):
+        user = users.get_current_user()
+        my_output = User(user_id=user.user_id(),
+            color = self.request.get("save_color"),
+            style = self.request.get("save_style"),
+            gender = self.request.get("save_gender"),
+            extras = self.request.get("save_extras")
+        )
+        self.response.write("thanks for saving")
+        self.load_gallery()
+        my_output.put()
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
@@ -79,5 +88,6 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/match', MatchHandler),
     ('/login', LoginPage),
-    ('/Use', UsefulHandler)
+    ('/Use', UsefulHandler),
+    ('/gallery', GalleryHandler)
 ], debug=True)
