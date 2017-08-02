@@ -1,0 +1,13 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <h1> Your Gallery </h1>
+    {%for saved_set in saved_sets%}
+    <img src="/resources/{{saved_set.style}}">
+    <img src="/resources/{{saved_set.gender}}">
+    <img src="/resources/{{saved_set.color}}">
+    <img src="/resources/{{saved_set.extras}}">
+    {%endfor%}
+  </body>
+</html>
