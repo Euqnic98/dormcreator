@@ -32,6 +32,10 @@ class LinkHandler(webapp2.RequestHandler):
     def get(self):
         my_template=jinja_environment.get_template("templates/link.html")
         self.response.write(my_template.render())
+class UsefulHandler(webapp2.RequestHandler):
+    def get(self):
+        my_template=jinja_environment.get_template("templates/UsefulItems.html")
+        self.response.write(my_template.render())
 class MatchHandler(webapp2.RequestHandler):
     def get(self):
         user = users.get_current_user()
@@ -65,10 +69,7 @@ class LoginPage(webapp2.RequestHandler):
                 users.create_login_url('/match'))
 
             self.response.write('<html><body>%s</body></html>' % greeting)
-class FakeHandler(webapp2.RequestHandler):
-    def get(self):
-        my_template = jinja_environment.get_template("templates/UsefulItems.html")
-        self.response.write(my_template.render())
+
     # def Red(self):
 # class SubmitHandler(webapp2.RequestHandler):
 #     my_template=jinja_environment.get_template("templates/submitpage.html")
@@ -78,5 +79,5 @@ app = webapp2.WSGIApplication([
     ('/', MainHandler),
     ('/match', MatchHandler),
     ('/login', LoginPage),
-    ('/Fake', FakeHandler)
+    ('/Use', UsefulHandler)
 ], debug=True)
