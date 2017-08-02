@@ -74,12 +74,31 @@ div.room {
     color: white
   }
 
-.boxed{
+.boxed {
   position: relative;
 	width:1000px;
 	height:150px;
-  background: lightblue;
+  background-image : linear-gradient(to top,
+    rgba(255,255,255, 0),
+    rgba(255,255,255, 1) 90%);
   border: none;
   top: -260px;
   border-radius: 16px;
+}
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+}
+hr {
+  border:none;
+  border-top:1px dotted #f00;
+  color:#fff;
+  background-color:#fff;
+  height:40px;
+  width:1px;
 }
