@@ -20,7 +20,9 @@ h1 {
 }
 
 a {
-  background-color: yellow;
-  style: inline-block;
+  color: white;
+  font-family: Comic, sans-serif;
+  text-shadow: 2px 2px 6px red;
+  color: white;
 }
 /*this doesnt come up for every entry*/
