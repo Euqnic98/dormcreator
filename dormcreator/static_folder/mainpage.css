@@ -84,6 +84,7 @@ div.room {
   border: none;
   top: -260px;
   border-radius: 18px;
+  padding-top: 60px
 }
 a:link {
     color: black;
