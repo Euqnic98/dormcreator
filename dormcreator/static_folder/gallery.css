@@ -8,14 +8,15 @@ img{
 /*this is formated for full screen browser */
 
 h2 {
-  background-color: yellow;
-  color: black;
+  color: white;
+  text-shadow: 2px 2px 8px red;
+  text-align: center;
 }
 
 h1 {
   color: white;
   font-family: Comic, sans-serif;
-  text-shadow: 2px 2px 8px red;
+  text-shadow: 3px 3px 8px red;
   color: white;
   text-align: center;
 }
@@ -28,6 +29,7 @@ a {
 }
 .links{
   text-align: center;
+  margin-bottom: 50px
 }
 .home{
   margin-right: 30px
