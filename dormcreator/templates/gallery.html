@@ -5,12 +5,12 @@
   <body>
     <h1> Your Gallery </h1>
       {%for x in range(1,length)%}
-        <p> Room Set {{x}} </p>
+        <h2> Room Set {{x}} </h2>
       <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}">
       {%endfor%}
     <div class="boxed">
     </br>
-    </br> 
+    </br>
     <a href="/">Home Page</a>
       </br>
     <a href="/match">Match Page</a>
