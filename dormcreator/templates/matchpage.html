@@ -1,5 +1,6 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/resources/matchpage.js"></script>
 <link rel="stylesheet" href="/resources/matchpage.css"/>
 <body>
 
@@ -46,117 +47,129 @@ function savefunction() {
 </script> -->
 
 </form>
+<div class="slideshow-container">
 {%if(color)%}
-<h1> <img src = "/resources/{{ color }}" height ="600" width = "700"> </h1>
+  <div class="mySlides fade">
+      <img class ="image" src="/resources/{{ color }}" height ="600" width = "700">
+<!-- <h1> <img src = "/resources/{{ color }}" height ="600" width = "700"> </h1> -->
   {%if(color == "Red Comforter.jpeg")%}
-    <p> “VCNY Down Alternative Comforter” </br>
+      <div class="text"><p> “VCNY Down Alternative Comforter” </br>
       Store: Bed Bath & Beyond </br>
       Size: Twin XL </br>
       Price: $69.99 </br>
       <a href = "https://www.bedbathandbeyond.com/store/product/vcny-down-alternative-comforter/3279535?categoryId=10620 " >Click Here to Buy!</a>
-    </p>
+    </p></div>
     {%endif%}
 
     {%if(color == "BlueComforter.jpeg")%}
-      <p> “Comfort Classics 3M Down-Alternative Reversible Comforter Set” </br>
+      <div class="text"><p> “Comfort Classics 3M Down-Alternative Reversible Comforter Set” </br>
         Store: Kohl’s </br>
         Size: Twin XL </br>
         Price: $104.99 </br>
         <a href = "https://www.kohls.com/product/prd-2020806/comfort-classics-3m-down-alternative-reversible-comforter-set.jsp?color=Navy&prdPV=11 "> Click Here to Buy!</a>
-      </p>
+      </p></div>
+
       {%endif%}
 
       {%if(color == "GrayComforter.jpeg")%}
-        <p> “Faded Ribbed Jersey Comforter” </br>
+        <div class="text"><p> “Faded Ribbed Jersey Comforter” </br>
           Store: Urban Outfitters </br>
           Size: Twin XL </br>
           Price: $169.00 </br>
           **Online only** </br>
           <a href = "https://www.urbanoutfitters.com/shop/faded-ribbed-jersey-comforter?color=005&quantity=1&type=REGULAR"> Click Here to Buy!</a>
-        </p>
+        </p></div>
         {%endif%}
-
+      </div>
 {%endif%}
 
+
 {%if(gender)%}
-<h1> <img src = "/resources/{{ gender }}" height ="600" width = "700" > </h1>
+  <div class="mySlides fade">
+      <img class = "image" src="/resources/{{ gender }}" height ="600" width = "700" >
+
+<!-- <h1> <img src = "/resources/{{ gender }}" height ="600" width = "700" > </h1> -->
   {%if(gender == "Male Sheets.jpeg")%}
-    <p> “Wamsutta Cool Touch Percale Cotton Twin Fitted Sheet in Black” </br>
+    <div class="text"><p> “Wamsutta Cool Touch Percale Cotton Twin Fitted Sheet in Black” </br>
       Store: Bed Bath & Beyond </br>
       Size: Twin/Twin XL </br>
       Price: $14.99 </br>
       <a href = "https://www.bedbathandbeyond.com/store/product/wamsutta-reg-cool-touch-percale-cotton-fitted-sheet/3247959?skuId=42119951&mcid=PS_googlepla_nonbrand_bedding_online&product_id=42119951&adtype=pla_multichannel&product_channel=online&adpos=1o1&creative=161688525998&device=c&matchtype=&network=g"> Click Here to Buy!</a>
-    </p>
+    </p></div>
   {%endif%}
 
   {%if(gender == "FemaleSheets.jpeg")%}
-    <p> “Benzoyl Peroxide-Resistant Microfiber Twin XL” </br>
+    <div class="text"><p> “Benzoyl Peroxide-Resistant Microfiber Twin XL” </br>
       Store: Bed Bath & Beyond </br>
       Size: Twin/Twin XL </br>
       Price: $19.99 </br>
       <a href = "https://www.bedbathandbeyond.com/store/product/benzoyl-peroxide-resistant-microfiber-sheet-set/3282878?skuId=45790454&mcid=PS_googlepla_nonbrand_bedding_online&product_id=45790454&adtype=pla&product_channel=online&adpos=1o5&creative=43742631709&device=c&matchtype=&network=g"> Click Here to Buy!</a>
-    </p>
+    </p></div>
   {%endif%}
-
+</div>
 {%endif%}
 
 {%if(style)%}
-<h1> <img src = "/resources/{{ style }}" height ="600" width = "700" > </h1>
+<div class="mySlides fade">
+    <img class = "image" src = "/resources/{{ style }}" height ="600" width = "700" >
   {%if(style == "ModernStyle.jpeg")%}
-    <p> “White Wood American Dream” </br>
+    <div class="text"><p> “White Wood American Dream” </br>
       Store: Dormify </br>
       Price: $96.00 </br>
       <a href = "https://www.dormify.com/products/white-wood-american-dream"> Click Here to Buy!</a>
-    </p>
+    </p></div>
   {%endif%}
 
   {%if(style == "SportsStyle.jpeg")%}
-    <p> “Chicago Blackhawks Logo Poster” </br>
+    <div class="text"><p> “Chicago Blackhawks Logo Poster” </br>
       Store: Fine Art America </br>
       Price: $22.35 </br>
       <a href = "https://fineartamerica.com/products/chicago-blackhawks-logo-elliott-from-poster.html"> Click Here to Buy!</a>
-    </p>
+    </p></div>
   {%endif%}
 
   {%if(style == "BohemianStyle.jpeg")%}
-    <p> “Pine Wood L.O.V.E” </br>
+    <div class="text"><p> “Pine Wood L.O.V.E” </br>
       Store: Dormify </br>
       Price: $96.00 </br>
       <a href = "https://www.dormify.com/products/pine-wood-l-o-v-e"> Click Here to Buy!</a>
-    </p>
+    </p></div>
   {%endif%}
-
+</div>
 {%endif%}
 
 
 {%if(extras)%}
-  <h1> <img src = "/resources/{{ extras }}" height ="600" width = "700"> </h1>
+<div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img class = "image" src = "/resources/{{ extras }}" height ="600" width = "700">
     {%if(extras == "Chair.jpeg")%}
-      <p> “Fuzzy Kids Saucer Chair - PillowFort” </br>
+      <div class="text"><p> “Fuzzy Kids Saucer Chair - PillowFort” </br>
         Store: Target </br>
         Price: $34.99 </br>
         <a href = "https://www.target.com/p/fuzzy-kids-saucer-chair-cream-pillowfort-153/-/A-50570101?ref=tgt_adv_XS000000&AFID=google_pla_df&CPNG=PLA_Bedding+Shopping_Priority+Brands&adgroup=SC_Pillowfort&LID=700000001170770pgs&network=g&device=c&location=9021712"> Click Here to Buy!</a>
-      </p>
+      </p></div>
     {%endif%}
 
     {%if(extras == "Desk.jpeg")%}
-      <p> “Mainstays Student Desk, Multiple Finishes” </br>
+    <div class="text"><p> “Mainstays Student Desk, Multiple Finishes” </br>
         Store: Walmart </br>
         Price: $48.00 </br>
         <a href = "https://www.walmart.com/ip/Mainstays-Student-Desk-Multiple-Finishes/44736388?wmlspartner=wlpa&adid=22222222227033477653&wl0=&wl1=g&wl2=c&wl3=69080073632&wl4=aud-310687321802:pla-135801436112&wl5=9021712&wl6=&wl7=&wl8=&wl9=pla&wl10=8175035&wl11=online&wl12=44736388&wl13=&veh=sem"> Click Here to Buy!</a>
-      </p>
+      </p></div>
     {%endif%}
 
     {%if(extras == "Rug.jpeg")%}
-      <p> “Area Rug” </br>
+    <div class="text"><p> “Area Rug” </br>
         Store: Roomify </br>
         Price: $48.00 </br>
         <a href = "https://www.roomify.com/products/decorate-area-rug?variant=33260386322 "> Click Here to Buy!</a>
-      </p>
+      </p></div>
     {%endif%}
+  </div>
 
 {%endif%}
-
+</div>
 <form action = "/gallery" method = "post">
   <input type="hidden" name="save_style" value="{{style}}">
   <input type="hidden" name="save_gender" value="{{gender}}">
