@@ -89,10 +89,10 @@ class GalleryHandler(webapp2.RequestHandler):
         self.load_gallery()
     def get(self):
         self.load_gallery()
-class LoadingHandler(webapp2.RequestHandler):
-    def get(self):
-        my_template=jinja_environment.get_template("templates/Loading.html")
-        self.response.write(my_template.render())
+# class LoadingHandler(webapp2.RequestHandler):
+#     def get(self):
+#         my_template=jinja_environment.get_template("templates/Loading.html")
+#         self.response.write(my_template.render())
 
 
 app = webapp2.WSGIApplication([
