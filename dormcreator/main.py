@@ -19,7 +19,7 @@ from google.appengine.api import users
 import webapp2
 import jinja2
 import os
-import time
+
 
 
 jinja_environment = jinja2.Environment(
@@ -64,12 +64,18 @@ class LoginPage(webapp2.RequestHandler):
 
             self.response.write('<html><body>%s</body></html>' % greeting)
 class GalleryHandler(webapp2.RequestHandler):
-    def load_gallery(self):
+    def load_gallery(self, new_roomset=None):
         current_user = users.get_current_user()
         get_saved_data=User.query(User.user_id == current_user.user_id())
         saved_data=get_saved_data.fetch()
-        # for x in saved_data:
-        #     self.response.write("<img src='/resources/" + x.style + "'>")
+        if new_roomset:
+            roomset1=False
+            for x in saved_data:
+                if x.key == new_roomset.key:
+                    roomset1=True
+            if not roomset1:
+                saved_data.append(new_roomset)
+
         render_data={}
         render_data["saved_sets"]=saved_data
         render_data["length"]=len(saved_data)
@@ -83,11 +89,10 @@ class GalleryHandler(webapp2.RequestHandler):
             style = self.request.get("save_style"),
             gender = self.request.get("save_gender"),
             extras = self.request.get("save_extras")
-
         )
-        time.sleep(2)
         my_output.put()
-        self.load_gallery()
+
+        self.load_gallery(my_output)
     def get(self):
         self.load_gallery()
 # class LoadingHandler(webapp2.RequestHandler):
@@ -103,5 +108,5 @@ app = webapp2.WSGIApplication([
     ('/login', LoginPage),
     ('/Use', UsefulHandler),
     ('/gallery', GalleryHandler),
-    
+
 ], debug=True)
