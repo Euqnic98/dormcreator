@@ -1,7 +1,6 @@
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="/resources/matchpage.css"/>
-  <script src="resources/matchpage.js"></script>
 <body>
 
 
@@ -163,7 +162,9 @@ function savefunction() {
   <input type="hidden" name="save_gender" value="{{gender}}">
   <input type="hidden" name="save_extras" value="{{extras}}">
   <input type="hidden" name="save_color" value="{{color}}">
-  <button class="savebutton" style="vertical-align:center"><span>Save</span></button>
+  {%if style != "" or gender != "" or extras != "" or color != ""%}
+    <button class="savebutton" style="vertical-align:center"><span>Save</span></button>
+  {%endif%}
 </form>
 
 
