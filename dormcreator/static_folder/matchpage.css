@@ -176,3 +176,7 @@ h1 {
     opacity: 1;
     right: 0;
   }
+#wrapper{
+      background-image:url('http://allswalls.com/images/blue-paper-wallpaper-1.jpg');
+      display:none;
+  }
