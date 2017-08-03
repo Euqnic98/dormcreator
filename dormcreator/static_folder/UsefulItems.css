@@ -1,15 +1,17 @@
 h1 {
   font-size: 50px;
-  color: black;
+  color: white;
   text-align: center;
+  text-shadow: 2px 2px 8px red;
+  font-family: Comic, sans-serif;
   /*text-shadow: 4px 2px #000000;*/
 }
 body{
-  background-image:url("https://s-media-cache-ak0.pinimg.com/736x/99/69/f9/9969f9be19bfdf4df79d666140448c9e--cover-wallpaper-summer-wallpaper.jpg")
+  background-image:url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg")
 }
 li {
   font-size: 35px;
-  color: purple;
+  color: white;
   /*text-shadow: 4px 2px #000000;*/
   margin-bottom: 60px;
 

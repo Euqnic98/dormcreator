@@ -14,4 +14,7 @@ h2 {
 
 h1 {
   color: white;
+  font-family: Comic, sans-serif;
+  text-shadow: 2px 2px 8px red;
+  color: white;
 }

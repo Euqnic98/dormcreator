@@ -133,7 +133,7 @@ h1 {
   border-style: solid;
   /*border-color: transparent #fff;*/
 }
-#savebutton {
+.savebutton {
     display: inline-block;
     border-radius: 12px;
     background-color: #f4511e;
@@ -153,14 +153,14 @@ h1 {
 
   }
 
-#savebutton span {
+.savebutton span {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
   }
 
-#savebutton span:after {
+.savebutton span:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -169,11 +169,11 @@ h1 {
     transition: 0.5s;
   }
 
-#savebutton:hover span {
+.savebutton:hover span {
     padding-right: 25px;
   }
 
-#savebutton:hover span:after {
+.savebutton:hover span:after {
     opacity: 1;
     right: 0;
   }
