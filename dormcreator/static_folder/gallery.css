@@ -17,6 +17,7 @@ h1 {
   font-family: Comic, sans-serif;
   text-shadow: 2px 2px 8px red;
   color: white;
+  text-align: center;
 }
 
 a {
@@ -24,5 +25,14 @@ a {
   font-family: Comic, sans-serif;
   text-shadow: 2px 2px 6px red;
   color: white;
+}
+.links{
+  text-align: center;
+}
+.home{
+  margin-right: 30px
+}
+.match{
+  margin-left: 30px
 }
 /*this doesnt come up for every entry*/
