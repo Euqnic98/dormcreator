@@ -6,7 +6,17 @@
     <h1> Your Gallery </h1>
       {%for x in range(1,length)%}
         <p> Room Set {{x}} </p>
-      <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}">
+        {% if (style == none) %}
+          <img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}"><p>No Style Selected</p>
+        {% elif (gender == none) %}
+          <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}"><p>No Gender Selected</p>
+        {% elif (color == none) %}
+          <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].extras}}"><p>No Color Selected</p>
+        {% elif (extras == none) %}
+          <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><p>No Extras Selected</p>
+        {% elif (style and gender and color and extras != none) %}
+          <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}">
+        {% endif %}
       {%endfor%}
     <div class="boxed">
       <a href="/">Home Page</a><a href="/match">Match Page</a>
