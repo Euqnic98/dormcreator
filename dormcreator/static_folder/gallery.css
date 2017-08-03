@@ -5,5 +5,9 @@ img{
 /*this is formated for full screen browser */
 
 body{
-  background-image: url("http://eskipaper.com/images/light-blue-background-2.jpg");
+  background-color: pink;
+}
+
+h1 {
+  color: blue;
 }
