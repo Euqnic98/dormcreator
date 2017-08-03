@@ -3,8 +3,11 @@ div {
   width:100%;*/
 }
 h1 {
-  color: gray;
+  color: white;
   text-align: center;
+  font-family: Comic, sans-serif;
+  text-shadow: 2px 2px 8px red;
+
   /*text-shadow: 3px 3px #000000;*/
 }
 h2{
@@ -13,9 +16,9 @@ h2{
 }
 
 body{
-  background-image:url("http://www.onlyfashionbags.com/wp-content/uploads/2016/03/Cartoon-Shopping-Bags-1.jpg")
+background-image:url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg")
 }
 p {
-  background-color: white;
-  display: inline-block;
+  color: white;
+  text-decoration: none;
 }
