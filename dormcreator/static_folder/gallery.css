@@ -1,5 +1,5 @@
 body{
-  background-image:url("http://eskipaper.com/images/light-blue-background-2.jpg")
+  background-image:url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg")
 }
 img{
   width: 350px;
@@ -7,11 +7,16 @@ img{
 }
 /*this is formated for full screen browser */
 
-p {
-  background-color: blue;
-  color: white;
+h2 {
+  background-color: yellow;
+  color: black;
 }
 
 h1 {
-  color: blue;
+  color: white;
+}
+
+a {
+  background-color: yellow;
+  style: inline-block;
 }
