@@ -1,11 +1,15 @@
+body{
+  background-image:url("http://allswalls.com/images/blue-paper-wallpaper-1.jpg")
+}
 img{
   width: 350px;
   height:350px;
 }
 /*this is formated for full screen browser */
 
-body{
-  background-color: pink;
+p {
+  background-color: blue;
+  color: white;
 }
 
 h1 {
