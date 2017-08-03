@@ -5,7 +5,7 @@
   <body>
     <h1><center> Your Gallery <center></h1>
       {%for x in range(1,length)%}
-<<<<<<< HEAD
+
         <p> Room Set {{x}} </p>
         {% if saved_sets[x].style %}
         <img src="/resources/{{saved_sets[x].style}}">
@@ -21,10 +21,9 @@
         {%endif%}
 
 
-=======
+
         <h2> Room Set {{x}} </h2>
       <img src="/resources/{{saved_sets[x].style}}"><img src="/resources/{{saved_sets[x].gender}}"><img src="/resources/{{saved_sets[x].color}}"><img src="/resources/{{saved_sets[x].extras}}">
->>>>>>> 659e25f51811dad2447a7ecb8b3a4e49b74ca9b6
       {%endfor%}
     <div class="boxed">
     </br>
