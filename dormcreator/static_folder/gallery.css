@@ -1,5 +1,17 @@
+body{
+  background-image:url("http://eskipaper.com/images/light-blue-background-2.jpg")
+}
 img{
   width: 350px;
   height:350px;
 }
 /*this is formated for full screen browser */
+
+p {
+  background-color: blue;
+  color: white;
+}
+
+h1 {
+  color: blue;
+}
