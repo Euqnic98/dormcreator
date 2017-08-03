@@ -7,11 +7,11 @@ img{
 }
 /*this is formated for full screen browser */
 
-p {
-  background-color: blue;
-  color: white;
+h2 {
+  background-color: yellow;
+  color: black;
 }
 
 h1 {
-  color: blue;
+  color: white;
 }
