@@ -83,8 +83,9 @@ class GalleryHandler(webapp2.RequestHandler):
             style = self.request.get("save_style"),
             gender = self.request.get("save_gender"),
             extras = self.request.get("save_extras")
-            time.sleep(2)
+
         )
+        time.sleep(2)
         my_output.put()
         self.load_gallery()
     def get(self):
@@ -102,5 +103,5 @@ app = webapp2.WSGIApplication([
     ('/login', LoginPage),
     ('/Use', UsefulHandler),
     ('/gallery', GalleryHandler),
-    ('/loading', LoadingHandler)
+    
 ], debug=True)
