@@ -4,6 +4,7 @@ body{
 img{
   width: 350px;
   height:350px;
+  border-style: solid;
 }
 /*this is formated for full screen browser */
 
