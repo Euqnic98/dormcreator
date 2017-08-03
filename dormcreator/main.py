@@ -19,6 +19,7 @@ from google.appengine.api import users
 import webapp2
 import jinja2
 import os
+import time
 
 
 jinja_environment = jinja2.Environment(
@@ -82,11 +83,17 @@ class GalleryHandler(webapp2.RequestHandler):
             style = self.request.get("save_style"),
             gender = self.request.get("save_gender"),
             extras = self.request.get("save_extras")
+            time.sleep(2)
         )
         my_output.put()
         self.load_gallery()
     def get(self):
         self.load_gallery()
+class LoadingHandler(webapp2.RequestHandler):
+    def get(self):
+        my_template=jinja_environment.get_template("templates/Loading.html")
+        self.response.write(my_template.render())
+
 
 app = webapp2.WSGIApplication([
     ('/link', LinkHandler),
@@ -94,5 +101,6 @@ app = webapp2.WSGIApplication([
     ('/match', MatchHandler),
     ('/login', LoginPage),
     ('/Use', UsefulHandler),
-    ('/gallery', GalleryHandler)
+    ('/gallery', GalleryHandler),
+    ('/loading', LoadingHandler)
 ], debug=True)
