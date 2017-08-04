@@ -16,3 +16,19 @@ li {
   margin-bottom: 60px;
 
 }
+a {
+  color: white;
+  font-family: Comic, sans-serif;
+  text-shadow: 2px 2px 6px red;
+  color: white;
+
+}
+.home{
+  font-size: 20px;
+  margin-right: 30px;
+
+}
+.links{
+  text-align: center;
+  margin-bottom: 50px
+}
